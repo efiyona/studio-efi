@@ -1,0 +1,1491 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&family=Montserrat:ital,wght@0,100;1,100&display=swap');
+:root {
+    --white: #ffffff;
+    --torkiz: #1ea891;
+    --blue: #2e3192;
+    --orange: #e2a427;
+    --gray: #333333;
+    
+}
+
+@font-face {
+    font-family: kidma;
+    src: url(/fonts/kidma-book.woff);
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Assistant', sans-serif;
+    scroll-behavior: smooth;
+    letter-spacing: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    font-family: 'Assistant', sans-serif;
+    font-weight: bold;
+    text-align: right;
+    font-size: 4.5em;
+    color: var(--blue);
+    margin: 0;
+    padding: 0;
+    line-height: 70px;
+}
+
+h1 span{
+    color: var(--torkiz);
+    font-weight:normal;
+    line-height: 100px;
+}
+
+h2{
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    color: var(--white);
+    margin: 0;
+    padding: 0;
+}   
+
+h2 span{
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    color: var(--blue);
+    margin: 0;
+    padding: 0;
+} 
+
+h3{
+    font-family: kidma;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight:500;
+    color: var(--blue);
+    margin: 0;
+    padding: 0;
+}
+
+h4{
+    text-align: center;
+    font-size: 1.3em;
+    font-weight:normal;
+    color: var(--white);
+    margin: 0;
+    padding: 0;
+}
+
+h4 span{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight:normal;
+    color: var(--white);
+    margin: 0;
+    padding: 0;
+}
+
+h5{
+    font-family: kidma;
+    text-align: center;
+    font-size: 3em;
+    font-weight:normal;
+    color: var(--white);
+    margin: 0;
+    padding: 0;
+    line-height: .8em;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+.linkw{
+    color: #2e924a;
+    font-weight: bold;
+}
+
+p{  
+    text-align: right;
+    font-size: 1.2em;
+    font-weight:normal;
+    color: var(--gray);
+    margin: 0;
+    padding: 0;
+    line-height: 30px;
+}
+
+p span{  
+    font-weight:bold;
+}
+
+li{
+    list-style: none;
+}
+
+.hambnav{
+    width: 100vw;
+    height: 0;
+    background-color: var(--torkiz);
+    position: fixed;
+    z-index: 1;
+    transition: .3s;
+    overflow: hidden;
+}
+
+.hambnav .navbarres{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+}
+
+.hambnav .background{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.hambnav .background img{
+    width: 100%;
+    height: auto;
+}
+
+.hambnav .navbarres ul{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    padding: 0;
+    margin: 0;
+}
+
+.hambnav .navbarres ul li h3{
+    font-family: kidma;
+    color: var(--white);
+    letter-spacing: 3px;
+    font-size: 2em;
+}
+
+.hambnav-active{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--torkiz);
+    position: fixed;
+    z-index: 1;
+}
+
+header .navicon{
+    display: none;
+}
+
+header{
+    width: 100%;
+    height: auto;
+    padding: 5px 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+
+    background-color: var(--white);
+    z-index: 5555;
+    animation: headermove 1s 1 ease-in-out;
+}
+
+@keyframes headermove {
+    0% {
+        right:0; top:-100px;
+        opacity: 0;
+    }
+    100% {
+        right:0px; top:0px;
+        opacity: 1;
+    }
+}
+
+header .logob{
+    width:200px;
+    height: auto;
+    margin: auto;
+}
+
+header .logo{
+    width:200px;
+    height: auto;
+}
+
+header .logo img{
+    width: 100%;
+    height: auto;
+}
+
+header .logob img{
+    width: 100%;
+    height: auto;
+}
+
+header .navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+header .navbar ul li a h3{
+    transition: .3s;
+}
+
+header .navbar ul li a:hover h3{
+    color: var(--orange);
+    transition: .3s;
+}
+
+header .navbar ul li a .choose h3{
+    background-color: var(--torkiz);
+    color: var(--white);
+    padding: 5px 25px;
+    border-radius: 50px;
+    transition: .3s;
+}
+
+header .navbar ul li a:hover .choose h3{
+    background-color:var(--orange);
+    transition: .3s;
+}
+
+.start{
+    width: 100%;
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.start .box{
+    width: 50%;
+}
+
+.start .box img{
+    width: 100%;
+    height: auto;
+    padding-left: 40px;
+    animation: imgmove 2s 1 ease-in-out;
+    position: relative;
+}
+
+@keyframes imgmove {
+    0% {
+        right:0; bottom:-150px;
+        opacity: 0;
+    }
+    100% {
+        right:0px; bottom:0px;
+        opacity: 1;
+    }
+}
+
+.start .box h1{
+    margin: 20px 50px;
+    animation: titlemove 1s 1 ease-in-out;
+    position: relative;
+}
+
+@keyframes titlemove {
+    0% {
+        right:0; top:-150px;
+        opacity: 0;
+    }
+    100% {
+        right:0px; top:0px;
+        opacity: 1;
+    }
+}
+
+.start .box p{
+    margin: 20px 50px;
+    animation: pmove 2s 1 ease-in-out;
+    position: relative;
+}
+
+@keyframes pmove {
+    0% {
+        right:-550; bottom:0;
+        opacity: 0;
+    }
+    100% {
+        right:0px; bottom:0;
+        opacity: 1;
+    }
+}
+
+.boxbtn .btn{
+    animation: btnmove 2s 1 ease-in-out;
+    position: relative;
+}
+
+@keyframes btnmove {
+    0% {
+        right:0; bottom:-150px;
+        opacity: 0;
+    }
+    100% {
+        right:0px; bottom:0px;
+        opacity: 1;
+    }
+}
+
+.btn{
+    position: relative;
+    margin: auto;
+
+    width: 180px;
+    margin: 50px auto 0 auto;
+}
+
+.btn a h4{
+    border-radius: 50px;
+    padding: 10px 20px;
+    transition: .3s;
+    background-color: var(--torkiz);
+    color: var(--white);
+
+    animation: scalepop 2.5s infinite ease-in-out;
+
+}
+
+@keyframes scalepop {
+    0% {
+        transform: scale(1.0);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+.btn:hover a h4{
+    background-color: var(--orange);
+    color: var(--white);
+    transition: .3s;
+    cursor: pointer;
+}
+
+.btn .circle-up{
+    position: absolute;
+    width: 70px;
+    top: -15;
+    right: -30;
+}
+
+.btn .circle-up img{
+    width: 100%;
+    height: auto;
+}
+
+.btn .circle-down{
+    position: absolute;
+    width: 70px;
+    bottom: -15;
+    left: -70;
+}
+
+.btn .circle-down img{
+    width: 100%;
+    height: auto;
+}
+
+.service{
+    width: 100%;
+    height: auto;
+    margin-top: 150px;
+    padding: 50px 0;
+    background-color: var(--blue);
+    position: relative;
+}
+
+.service .background{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.service .background img{
+    width: 100%;
+    height: auto;
+}
+
+.service .block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+    margin-top: 20px;
+}
+
+.service .block h2{
+    margin-top: 0px;
+    position: relative;
+}
+
+.service .block h2 img{
+    position: absolute;
+    width: 25px;
+    height: auto;
+
+    position: absolute;
+    top: 50%;
+    right: -35;
+    transform: translate(0%, -37%);
+}
+
+.service .container{
+    width: 100%;
+    height: auto;
+    padding: 50px;
+
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.service .container .card{
+    width: 250px;
+    height: 250px;
+    position: relative;
+    
+    transform: scale(1);
+
+}
+
+.service .container .card:hover{
+    cursor: pointer;
+}
+
+.service .container .card h5{
+    cursor: pointer;
+    transition: .3s;
+
+}
+
+.service .container .card:hover h5{
+    cursor: pointer;
+    color: var(--orange);
+    transition: .3s;
+}
+
+.service .container .card .circle-up{
+    position: absolute;
+    width: 55px;
+    top: -30;
+    right: -10;
+}
+
+.service .container .card .circle-up img{
+    width: 100%;
+    height: auto;
+}
+
+.service .container .card .circle-down{
+    position: absolute;
+    width: 55px;
+    bottom: -30;
+    left: -10;
+}
+
+.service .container .card .circle-down img{
+    width: 100%;
+    height: auto;
+}
+
+.service .container .card .icon{
+    width: 120px;
+    height: auto;
+    margin: 60px auto 0 auto;
+    animation: movepop 2.5s infinite ease-in-out;
+}
+
+
+@keyframes movepop {
+    0% {
+        transform:translateY(15px);
+    }
+    50% {
+        transform:translateY(5px);
+    }
+    100% {
+        transform:translateY(15px);
+    }
+}
+
+.service .container .card .icon img{
+    width: 100%;
+    height: auto;
+}
+
+.service .btn{
+    margin: 100px auto 0 auto;
+    width: 300px;
+}
+
+.service .btn a h4{
+    animation: none;
+}
+
+.service .btn .circle-up{
+    position: absolute;
+    width: 30px;
+    top: -5;
+    right: -5;
+}
+
+.service .btn .circle-down{
+    position: absolute;
+    width: 30px;
+    bottom: -5;
+    left: -5;
+}
+
+.lastwork{
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+    position: relative;
+    background-color: #F5F5F5;
+}
+
+.lastwork .block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+    margin-top: 20px;
+}
+
+.lastwork .block h2{
+    color: var(--blue);
+    margin-top: 0px;
+    position: relative;
+}
+
+.block h2 img{
+    position: absolute;
+    width: 25px;
+    height: auto;
+
+    position: absolute;
+    top: 50%;
+    right: -35;
+    transform: translate(0%, -37%);
+}
+
+.lastwork .container{
+    width: 100%;
+    height: auto;
+    padding: 10 20;
+    margin-bottom: 50px;
+
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.lastwork .container .card{
+    width: 350px;
+    height: 200px;
+    border-radius: 50px;
+    position: relative;
+}
+
+.lastwork .container .card .workimg{
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--torkiz);
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.lastwork .container .card .workimg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    transition: .3s;
+    transform: scale(1);
+}
+
+.lastwork .container .card:hover .workimg img{
+    cursor: pointer;
+    transition: .3s;
+    transform: scale(1.1);
+}
+
+.lastwork .container .card .circle-up{
+    width: 60px;
+    position: absolute;
+    top: -10;
+    right: -10;
+}
+
+.lastwork .container .card .circle-up img{
+    width: 100%;
+    height: auto;
+}
+
+.lastwork .container .card .title{
+    background-color: var(--orange);
+    border-radius: 50px;
+    width: 55%;
+    padding: 3px 5px;
+
+    position: absolute;
+    top: -15;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.lastwork .btn{
+    margin: 60px auto 0 auto;
+    width: 250px;
+}
+
+.lastwork .btn a h4{
+    animation: none;
+    background-color: transparent;
+}
+
+.lastwork .btn:hover a h4{
+    animation: none;
+}
+
+.lastwork .btn:hover a h4 span{
+    transition: .3s;
+    animation: none;
+    color: var(--orange);
+}
+
+.lastwork .btn a h4 span{
+    color: var(--blue);
+    transition: .3s;
+}
+
+.lastwork .btn .circle-up{
+    position: absolute;
+    width: 30px;
+    top: 0;
+    right: 0;
+}
+
+.lastwork .btn .circle-down{
+    position: absolute;
+    width: 30px;
+    bottom: 0;
+    left: 0;
+}
+
+
+
+
+
+/* התאמה למסכים שונים */
+@media only screen and (max-width: 1100px){
+
+    h4{
+        text-align: center;
+        font-size: 1.1em;
+        font-weight:normal;
+        color: var(--white);
+        margin: 0;
+        padding: 0;
+    }
+
+    .lastwork .container{
+        width: 100%;
+        height: auto;
+        padding: 10 20;
+        margin-bottom: 50px;
+    
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+    }
+    
+    .lastwork .container .card{
+        width: 350px;
+        height: 200;
+        border-radius: 20px;
+        position: relative;
+    }
+    
+    .lastwork .container .card .workimg{
+        width: 100%;
+        height: 100%;
+        border: 2px solid var(--torkiz);
+        border-radius: 50px;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (max-width: 950px){
+    h1{
+        font-size: 4em;
+        color: var(--blue);
+        margin: 0;
+        padding: 0;
+        line-height: 60px;
+    }
+    
+    h1 span{
+        color: var(--torkiz);
+        font-weight:normal;
+        line-height: 80px;
+    }
+    
+    h2{
+        text-align: center;
+        font-size: 3em;
+        font-weight: bold;
+        color: var(--white);
+        margin: 0;
+        padding: 0;
+    }   
+    
+    h2 span{
+        text-align: center;
+        font-size: 3em;
+        font-weight: bold;
+        color: var(--blue);
+        margin: 0;
+        padding: 0;
+    } 
+    
+    h3{
+        text-align: center;
+        font-size: 1.2em;
+        font-weight:500;
+        color: var(--blue);
+        margin: 0;
+        padding: 0;
+    }
+    
+    h4{
+        text-align: center;
+        font-size: 1.3em;
+        font-weight:normal;
+        color: var(--white);
+        margin: 0;
+        padding: 0;
+    }
+    
+    h4 span{
+        text-align: center;
+        font-size: 1.2em;
+        font-weight:normal;
+        color: var(--white);
+        margin: 0;
+        padding: 0;
+    }
+    
+    h5{
+        font-size: 2.5em;
+    }
+    
+    
+    a{
+        text-decoration: none;
+    }
+    
+    p{  
+        text-align: right;
+        font-size: 1em;
+        font-weight:normal;
+        color: var(--gray);
+        margin: 0;
+        padding: 0;
+        line-height: 30px;
+    }
+    
+    p span{  
+        font-weight:bold;
+    }
+
+    header .navbar ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 35px;
+    }
+
+    .service{
+        margin-top: 80px;
+    }
+    
+    .service .container{
+        width: 100%;
+        height: auto;
+        padding: 50px;
+    
+        display: flex;
+        justify-content: center;
+        gap: 70px;
+    }
+    
+    .service .container .card{
+        width: 200px;
+        height: 200px;
+        position: relative;
+        
+        transform: scale(1);
+    }
+
+    .service .container .card .circle-up{
+        position: absolute;
+        width: 40px;
+        top: -30;
+        right: -10;
+    }
+    
+    
+    .service .container .card .circle-down{
+        position: absolute;
+        width: 40px;
+        bottom: -30;
+        left: -10;
+    }
+    
+    .service .container .card .icon{
+        width: 100px;
+        height: auto;
+        margin: 60px auto 0 auto;
+        animation: movepop 2.5s infinite ease-in-out;
+    }
+
+    .service .btn{
+        margin: 70px auto 0 auto;
+        width: 250px;
+    }
+    
+    .service .btn a h4{
+        animation: none;
+    }
+    
+    .service .btn .circle-up{
+        position: absolute;
+        width: 30px;
+        top: -5;
+        right: -5;
+    }
+    
+    .service .btn .circle-down{
+        position: absolute;
+        width: 30px;
+        bottom: -5;
+        left: -5;
+    }
+
+    .lastwork .container{
+    
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin: 15 0;
+    }
+    
+    .lastwork .container .card{
+        width: 350px;
+        height: 200;
+        border-radius: 50px;
+        position: relative;
+        margin: auto;
+    }
+
+    .lastwork .container .card .title{
+        background-color: var(--orange);
+        border-radius: 50px;
+        width: 40%;
+        padding: 3px 5px;
+    
+        position: absolute;
+        top: -15;
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 750px){
+
+    header{
+        padding: 15 40;
+    }
+
+    header .navicon{
+        display: block;
+        width: 35px;
+        height: auto;
+
+        position: absolute;
+        top: 50%;
+        left: 30;
+        transform: translate(0, -50%);
+    }
+
+    header .navicon:hover{
+        cursor: pointer;
+    }
+
+    header .navicon img{
+        width: 100%;
+        height: auto;
+    }
+
+    .navbar{
+        display: none;
+    }
+
+    .logo{
+        margin: auto;
+    }
+
+    h1{
+        font-size: 4em;
+        color: var(--blue);
+        margin: 0;
+        padding: 0;
+        line-height: 60px;
+        text-align: center;
+    }
+    
+    h1 span{
+        color: var(--torkiz);
+        font-weight:normal;
+        line-height: 80px;
+    }
+    
+    h2{
+        text-align: center;
+        font-size: 2.5em;
+        font-weight: bold;
+        color: var(--white);
+        margin: 0;
+        padding: 0;
+    }   
+    
+    h2 span{
+        text-align: center;
+        font-size: 2.5em;
+        font-weight: bold;
+        color: var(--blue);
+        margin: 0;
+        padding: 0;
+    } 
+    
+    h3{
+        text-align: center;
+        font-size: 1.2em;
+        font-weight:500;
+        color: var(--blue);
+        margin: 0;
+        padding: 0;
+    }
+    
+    h4{
+        text-align: center;
+        font-size: 1.2em;
+        font-weight:normal;
+        color: var(--white);
+        margin: 0;
+        padding: 0;
+    }
+    
+    h4 span{
+        text-align: center;
+        font-size: 1.2em;
+        font-weight:normal;
+        color: var(--white);
+        margin: 0;
+        padding: 0;
+    }
+    
+    h5{
+        font-size: 1.8em;
+    }
+    
+    
+    a{
+        text-decoration: none;
+    }
+    
+    p{  
+        text-align: center;
+        font-size: 1em;
+        font-weight:normal;
+        color: var(--gray);
+        margin: 0;
+        padding: 0;
+        line-height: 30px;
+    }
+    
+    p span{  
+        font-weight:bold;
+    }
+
+    header .navbar ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 35px;
+    }
+
+    .start{
+        width: 100%;
+        padding-top: 70px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .start .box{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .start .computerback{
+        width: 100%;
+        margin: auto;
+        padding: 0;
+        margin-top: 50px;
+    }
+
+    .start .computerback img{
+       padding: 0;
+    }
+
+    .start .box h1 {
+        margin: 20px 50px;
+    }
+
+    .service{
+        margin-top: 50px;
+    }
+
+    .service .block h2 img {
+        position: absolute;
+        width: 20px;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        right: -30;
+        transform: translate(0%, -37%);
+    }
+    
+    .service .container{
+        width: 100%;
+        height: auto;
+        padding: 50px;
+    
+        display: flex;
+        justify-content: center;
+        gap: 70px;
+    }
+    
+    .service .container .card{
+        width: 150px;
+        height: 150px;
+        position: relative;
+        
+        transform: scale(1);
+    }
+
+    .service .container .card .circle-up{
+        position: absolute;
+        width: 30px;
+        top: -20;
+        right: -10;
+    }
+    
+    
+    .service .container .card .circle-down{
+        position: absolute;
+        width: 30px;
+        bottom: -20;
+        left: -10;
+    }
+    
+    .service .container .card .icon{
+        width: 85px;
+        height: auto;
+        margin: 30px auto 0 auto;
+        animation: movepop 2.5s infinite ease-in-out;
+    }
+
+    .service .btn{
+        margin: 70px auto 0 auto;
+        width: 250px;
+    }
+    
+    .service .btn a h4{
+        animation: none;
+    }
+    
+    .service .btn .circle-up{
+        position: absolute;
+        width: 30px;
+        top: -5;
+        right: -5;
+    }
+    
+    .service .btn .circle-down{
+        position: absolute;
+        width: 30px;
+        bottom: -5;
+        left: -5;
+    }
+
+    .lastwork .container{
+    
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin: 15 0;
+    }
+    
+    .lastwork .container .card{
+        width: 350px;
+        height: 200;
+        border-radius: 50px;
+        position: relative;
+        margin: auto;
+    }
+
+    .lastwork .container .card .title{
+        background-color: var(--orange);
+        border-radius: 50px;
+        width: 40%;
+        padding: 3px 5px;
+    
+        position: absolute;
+        top: -15;
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
+
+    .lastwork .block h2 img {
+        position: absolute;
+        width: 20px;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        right: -30;
+        transform: translate(0%, -37%);
+    }
+}
+
+@media only screen and (max-width: 650px){
+
+    header{
+        padding: 15 40;
+    }
+
+    header .navicon{
+        display: block;
+        width: 35px;
+        height: auto;
+
+        position: absolute;
+        top: 50%;
+        left: 30;
+        transform: translate(0, -50%);
+    }
+
+    header .navicon:hover{
+        cursor: pointer;
+    }
+
+    header .navicon img{
+        width: 100%;
+        height: auto;
+    }
+
+    .navbar{
+        display: none;
+    }
+
+    .logo{
+        margin: auto;
+    }
+
+    h1{
+        font-size: 3.5em;
+        color: var(--blue);
+        margin: 0;
+        padding: 0;
+        line-height: 60px;
+        text-align: center;
+    }
+    
+    h1 span{
+        color: var(--torkiz);
+        font-weight:normal;
+        line-height: 80px;
+    }
+    
+    h2{
+        text-align: center;
+        font-size: 1.8em;
+        font-weight: bold;
+        color: var(--white);
+        margin: 0;
+        padding: 0;
+    }   
+    
+    h2 span{
+        text-align: center;
+        font-size: 1.8em;
+        font-weight: bold;
+        color: var(--blue);
+        margin: 0;
+        padding: 0;
+    } 
+    
+    h3{
+        text-align: center;
+        font-size: 1.2em;
+        font-weight:500;
+        color: var(--blue);
+        margin: 0;
+        padding: 0;
+    }
+    
+    h4{
+        text-align: center;
+        font-size: 1.2em;
+        font-weight:normal;
+        color: var(--white);
+        margin: 0;
+        padding: 0;
+    }
+    
+    h4 span{
+        text-align: center;
+        font-size: 1.2em;
+        font-weight:normal;
+        color: var(--white);
+        margin: 0;
+        padding: 0;
+    }
+    
+    h5{
+        font-size: 2em;
+    }
+    
+    
+    a{
+        text-decoration: none;
+    }
+    
+    p{  
+        text-align: center;
+        font-size: 1.2em;
+        font-weight:normal;
+        color: var(--gray);
+        margin: 0;
+        padding: 0;
+        line-height: 30px;
+    }
+    
+    p span{  
+        font-weight:bold;
+    }
+
+    header .navbar ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 35px;
+    }
+
+    .start{
+        width: 100%;
+        padding-top: 70px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .start .box{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .start .computerback{
+        width: 100%;
+        margin: auto;
+        padding: 0;
+        margin-top: 50px;
+    }
+
+    .start .computerback img{
+       padding: 0;
+    }
+
+    .start .box h1 {
+        margin: 20px 50px;
+    }
+
+    .service{
+        margin-top: 50px;
+        padding-top: 20px;
+    }
+
+    .service .block{
+        margin-bottom: 30px;
+    }
+
+    .service .block h2 img {
+        position: absolute;
+        width: 15px;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        right: -25;
+        transform: translate(0%, -37%);
+    }
+    
+    .service .container{
+        width: 100%;
+        height: auto;
+        padding: 50px;
+    
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 80px;
+    }
+    
+    .service .container .card{
+        width: 200;
+        height: 200;
+        position: relative;
+        margin: auto;
+        transform: scale(1);
+    }
+
+    .service .container .card .circle-up{
+        position: absolute;
+        width: 40px;
+        top: -20;
+        right: -10;
+    }
+    
+    
+    .service .container .card .circle-down{
+        position: absolute;
+        width: 40px;
+        bottom: -20;
+        left: -10;
+    }
+    
+    .service .container .card .icon{
+        width: 100px;
+        height: auto;
+        margin: 40px auto 0 auto;
+        animation: movepop 2.5s infinite ease-in-out;
+    }
+
+    .service .btn{
+        margin: 70px auto 0 auto;
+        width: 250px;
+    }
+    
+    .service .btn a h4{
+        animation: none;
+    }
+    
+    .service .btn .circle-up{
+        position: absolute;
+        width: 30px;
+        top: -5;
+        right: -5;
+    }
+    
+    .service .btn .circle-down{
+        position: absolute;
+        width: 30px;
+        bottom: -5;
+        left: -5;
+    }
+
+    .lastwork{
+        padding: 20;
+    }
+
+    .lastwork .block{
+        margin-bottom: 50px;
+    }
+
+    .lastwork .container{
+    
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 30px;
+        margin: 15 0;
+    }
+    
+    .lastwork .container .card{
+        width: 300px;
+        height: 150px;
+        border-radius: 20px;
+        position: relative;
+        margin: auto;
+    }
+
+    .lastwork .container .card .title{
+        background-color: var(--orange);
+        border-radius: 50px;
+        width: 55%;
+        padding: 3px 5px;
+    
+        position: absolute;
+        top: -15;
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
+
+    .lastwork .block h2 img {
+        position: absolute;
+        width: 15px;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        right: -25;
+        transform: translate(0%, -37%);
+    }
+
+    .lastwork .btn{
+        width: 230;
+    }
+}
+
