@@ -1615,3 +1615,6 @@ footer .credit{
     .contact .container{ gap: 40px; padding: 30px 10px; flex-wrap: wrap; }
     .contact{ margin-top: 80px; }
 }
+
+/* hardening: dark fallback behind sections that rely on the big background image */
+.service, .contact, .hambnav .background{ background-color: var(--blue); }
