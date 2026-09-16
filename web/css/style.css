@@ -1618,3 +1618,5 @@ footer .credit{
 
 /* hardening: dark fallback behind sections that rely on the big background image */
 .service, .contact, .hambnav .background{ background-color: var(--blue); }
+.footer-nav li a:visited{ color: var(--white); }
+#contact{ scroll-margin-top: 90px; }
