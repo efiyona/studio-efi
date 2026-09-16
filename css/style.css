@@ -1489,3 +1489,129 @@ header .navbar ul li a:hover .choose h3{
     }
 }
 
+
+/* ===== contact ===== */
+.contact{
+    width: 100%;
+    position: relative;
+    margin-top: 150px;
+    padding-bottom: 60px;
+}
+.contact .background{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.contact .background img{
+    width: 100%;
+    height: auto;
+}
+.contact .block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    position: relative;
+}
+.contact .block h2{
+    margin-top: 0px;
+    position: relative;
+}
+.contact .contact-sub{
+    position: relative;
+    text-align: center;
+    font-size: 22px;
+    color: var(--white);
+    margin: 0 20px 50px 20px;
+}
+.contact .container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding: 30px 50px;
+    position: relative;
+}
+.contact .container .card{
+    width: 220px;
+    height: 220px;
+    position: relative;
+    text-decoration: none;
+    display: block;
+}
+.contact .container .card .icon{
+    width: 100px;
+    margin: 45px auto 0 auto;
+    animation: movepop 2.5s infinite ease-in-out;
+}
+.contact .container .card .icon svg{
+    width: 100%;
+    height: auto;
+}
+.contact .container .card:hover h5{
+    color: var(--orange);
+    transition: .3s;
+}
+.contact .container .card .circle-up{
+    position: absolute;
+    width: 55px;
+    top: -30;
+    right: -10;
+}
+.contact .container .card .circle-up img,
+.contact .container .card .circle-down img{
+    width: 100%;
+    height: auto;
+}
+.contact .container .card .circle-down{
+    position: absolute;
+    width: 55px;
+    bottom: -30;
+    left: -10;
+}
+
+/* ===== footer ===== */
+footer{
+    width: 100%;
+    background-color: var(--blue);
+    padding: 50px 0 30px 0;
+    text-align: center;
+    margin-top: 100px;
+}
+.footer-logo img{
+    width: 90px;
+    height: auto;
+}
+.footer-nav{
+    list-style: none;
+    padding: 0;
+    margin: 25px 0 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+.footer-nav li a{
+    color: var(--white);
+    text-decoration: none;
+    font-size: 18px;
+    transition: .3s;
+}
+.footer-nav li a:hover{
+    color: var(--orange);
+    transition: .3s;
+}
+footer .credit{
+    color: var(--white);
+    opacity: .7;
+    font-size: 15px;
+    margin: 0;
+}
+@media only screen and (max-width: 800px){
+    .contact .container{ gap: 40px; padding: 30px 10px; flex-wrap: wrap; }
+    .contact{ margin-top: 80px; }
+}
